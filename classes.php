@@ -26,14 +26,14 @@
         <div class="breadcrumbs">
             <div class="wrap">
                 <div class="wrap_float">
-                    <a href="..">Home</a> / <a href="#" class="current">Classes</a>
+                    <a href="..">Home</a> / <a href="#" class="current">Servizi</a>
                 </div>
             </div>
         </div>
         <section class="classes_list_section">
             <div class="wrap">
                 <div class="wrap_float">
-                    <h2 class="page_title">Classes</h2>
+                    <h2 class="page_title">I Nostri Servizi</h2>
                     <div class="classes_list">
 
                         <a href="classes-single.php" class="classes_item" style="background-color: #476EFF" data-color-type="dark">

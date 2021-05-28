@@ -145,7 +145,7 @@
                             <a href="classes-single.php" class="slide classes_item" style="background-color: #FF5100" data-color-type="dark">
                                 <div class="slide_right">
                                     <div class="image ie-img">
-                                        <img class="js-image" src="img/placeholder.jpg" alt="">
+                                        <img class="js-image" src="img/technician.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="slide_left">
@@ -153,7 +153,7 @@
                                     <h3 class="_title">Referente</h3>
                                     <div class="_author">
                                         <div class="img ie-img">
-                                            <img src="img/placeholder.jpg" alt="">
+                                            <img src="img/axel.JPEG" alt="">
                                         </div>
                                         <p class="name">Axel Nicolàs Leon Fleureau</p>
                                     </div>
@@ -163,7 +163,7 @@
                             <a href="classes-single.php" class="slide classes_item" style="background-color: #7749FF" data-color-type="dark">
                                 <div class="slide_right">
                                     <div class="image ie-img">
-                                        <img class="js-image" src="img/placeholder.jpg" alt="">
+                                        <img class="js-image" src="img/railWAY.jpeg" alt="">
                                     </div>
                                 </div>
                                 <div class="slide_left">
@@ -171,7 +171,7 @@
                                     <h3 class="_title">Referente</h3>
                                     <div class="_author">
                                         <div class="img ie-img">
-                                            <img src="img/placeholder.jpg" alt="">
+                                            <img src="img/axel.JPEG" alt="">
                                         </div>
                                         <p class="name">Axel Nicolàs Leon Fleureau</p>
                                     </div>
@@ -181,7 +181,7 @@
                             <a href="classes-single.php" class="slide classes_item" style="background-color: #476EFF" data-color-type="dark">
                                 <div class="slide_right">
                                     <div class="image ie-img">
-                                        <img class="js-image" src="img/placeholder.jpg" alt="">
+                                        <img class="js-image" src="img/axlski.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="slide_left">
@@ -189,7 +189,7 @@
                                     <h3 class="_title">Referente</h3>
                                     <div class="_author">
                                         <div class="img ie-img">
-                                            <img src="img/placeholder.jpg" alt="">
+                                            <img src="img/Pippo.png" alt="">
                                         </div>
                                         <p class="name">Pippo DePippis</p>
                                     </div>
@@ -199,7 +199,7 @@
                             <a href="classes-single.php" class="slide classes_item" style="background-color: #FF4F58" data-color-type="dark">
                                 <div class="slide_right">
                                     <div class="image ie-img">
-                                        <img class="js-image" src="img/placeholder.jpg" alt="">
+                                        <img class="js-image" src="img/axel.JPEG" alt="">
                                     </div>
                                 </div>
                                 <div class="slide_left">
@@ -207,7 +207,7 @@
                                     <h3 class="_title">Referente</h3>
                                     <div class="_author">
                                         <div class="img ie-img">
-                                            <img src="img/placeholder.jpg" alt="">
+                                            <img src="img/pluto.jpg" alt="">
                                         </div>
                                         <p class="name">Pluto DePlutus</p>
                                     </div>

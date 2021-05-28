@@ -20,7 +20,9 @@
 
 <body data-color="#FFDC49" data-color-type="light">
     <div class="container classes_page classes-single-page">
-        <?php require("navbar.php");?>
+        <header class="top_panel">
+            <?php require("navbar.php");?>
+        </header>
         <section class="classes_header">
             <div class="left" style="background-image: url(img/placeholder.jpg);">
                 <div class="content">

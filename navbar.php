@@ -9,18 +9,15 @@
                         <div class="menu" id="menu">
                             <div class="scroll">
                                 <ul id="menu-ul">
-                                    <li class="dropdown_li">
-                                        <a href="#"><span>Home</span></a>
-                                        <ul class="dropdown_ul">
-                                            <li><a href="index.php">Home Light</a></li>
-                                        </ul>
+                                    <li>
+                                        <a href="index.php"><span>Home</span></a>
                                     </li>
                                     <li class="dropdown_li">
-                                        <a href="#"><span>Classes</span></a>
+                                        <a href="#"><span>Servizi</span></a>
                                         <ul class="dropdown_ul">
-                                            <li><a href="classes.php">Classes</a></li>
-                                            <li><a href="classes-single.php">Classes Single 1</a></li>
-                                            <li><a href="classes-single-2.php">Classes Single 2</a></li>
+                                            <li><a href="classes.php">Tutti i Servizi</a></li>
+                                            <li><a href="classes-single.php">Risalita</a></li>
+                                            <li><a href="classes-single-2.php">Discesa</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown_li">
