@@ -19,6 +19,24 @@
 </head>
 
 <body>
+    <?php
+        include_once "Connessione.php";
+        ini_set('display_errors', 0);
+        function sanitize($s)
+        {
+            $fs = $s; //return mysqli_real_escape_string($s);
+            $delchar = array(";", "--", "%");
+            foreach ($delchar as $c) {
+                $fs = str_replace($c, "", $fs);
+            }
+            return $fs;
+        }
+
+        if (array_key_exists("tabname", $_GET)) {
+            $myquery = "SELECT * FROM " . sanitize($_GET["tabname"]) . ";";
+            $r = $conn->query($myquery);
+        }
+    ?>
     <div class="container">
         <header class="top_panel">
             <?php require("navbar.php");?>
@@ -35,7 +53,7 @@
                                 <p class="_subtitle">
                                     "professionalità" è il nostro motto.
                                 </p>
-                                <a href="classes-single.php" class="btn">ENTRA ORA</a>
+                                <a href="risalita.php" class="btn">Prenota ora</a>
                             </div>
                         </div>
                     </div>
@@ -43,7 +61,7 @@
                         <div class="right_top">
                             <p class="p">
                                 <i></i>
-                                Il massimo della <br>Risalita <a href="trainers.php">Con i nostri <br>Professionisti</a>
+                                Il massimo sulla <br>Risalita <a href="trainers.php">Con i nostri <br>Professionisti</a>
                             </p>
                         </div>
                         <div class="right_bottom">
@@ -63,7 +81,7 @@
                                 <p class="_subtitle">
                                     Ti insegniamo ad essere determinato nei tuoi obiettivi!
                                 </p>
-                                <a href="classes-single.php" class="btn">ENTRA ORA</a>
+                                <a href="risalita.php" class="btn">Prenota ora</a>
                             </div>
                         </div>
                     </div>
@@ -91,7 +109,7 @@
                                 <p class="_subtitle">
                                     "Impara divertendoti" è il nostro motto.
                                 </p>
-                                <a href="classes-single.php" class="btn">ENTRA ORA</a>
+                                <a href="risalita.php" class="btn">Prenota ora</a>
                             </div>
                         </div>
                     </div>
@@ -133,23 +151,23 @@
             <div class="wrap">
                 <div class="wrap_float">
                     <div class="section_top">
-                        <h2 class="title">I nostri Corsi</h2>
+                        <h2 class="title">I Servizi</h2>
                         <div class="arrows">
                             <div class="arrow prev">Prec</div>
                             <div class="arrow next">Prox</div>
                         </div>
-                        <a href="classes.php" class="link"><span>Le Nostre Classi</span></a>
+                        <a href="services.php" class="link"><span>Le Nostre Classi</span></a>
                     </div>
                     <div class="slider_wrap">
                         <div class="classes_slider" id="classes_slider">
-                            <a href="classes-single.php" class="slide classes_item" style="background-color: #FF5100" data-color-type="dark">
+                            <a href="risalita.php" class="slide classes_item" style="background-color: #FF5100" data-color-type="dark">
                                 <div class="slide_right">
                                     <div class="image ie-img">
                                         <img class="js-image" src="img/technician.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="slide_left">
-                                    <div class="_category">Responsabile tecnico</div>
+                                    <div class="_category">Soccorso GPS</div>
                                     <h3 class="_title">Referente</h3>
                                     <div class="_author">
                                         <div class="img ie-img">
@@ -160,7 +178,7 @@
                                 </div>
                             </a>
 
-                            <a href="classes-single.php" class="slide classes_item" style="background-color: #7749FF" data-color-type="dark">
+                            <a href="risalita.php" class="slide classes_item" style="background-color: #7749FF" data-color-type="dark">
                                 <div class="slide_right">
                                     <div class="image ie-img">
                                         <img class="js-image" src="img/railWAY.jpeg" alt="">
@@ -178,7 +196,7 @@
                                 </div>
                             </a>
 
-                            <a href="classes-single.php" class="slide classes_item" style="background-color: #476EFF" data-color-type="dark">
+                            <a href="risalita.php" class="slide classes_item" style="background-color: #476EFF" data-color-type="dark">
                                 <div class="slide_right">
                                     <div class="image ie-img">
                                         <img class="js-image" src="img/axlski.jpg" alt="">
@@ -196,7 +214,7 @@
                                 </div>
                             </a>
 
-                            <a href="classes-single.php" class="slide classes_item" style="background-color: #FF4F58" data-color-type="dark">
+                            <a href="risalita.php" class="slide classes_item" style="background-color: #FF4F58" data-color-type="dark">
                                 <div class="slide_right">
                                     <div class="image ie-img">
                                         <img class="js-image" src="img/axel.JPEG" alt="">
@@ -220,251 +238,13 @@
             </div>
         </section>
         <section class="schedule" id="schedule">
-            <div class="wrap">
-                <div class="wrap_float">
-                    <h2 class="title">Schedulazione</h2>
-                    <div class="date date-field js-date">
-                        <div class="date-span"><span class="js-day">16</span> <span class="js-month">Giugno</span> <span class="js-year">2021</span></div>
-                        <input type="text" class="js_calendar input-date">
-                        <input type="hidden" value="" class="input-date-value">
-                    </div>
-                    <div class="select_div">
-                        <div class="select_val">tutti i corsi</div>
-                        <select class="js-select">
-                            <option value="All Classes">All Classes</option>
-                            <option value="Crossfit">Crossfit</option>
-                            <option value="Yoga">Yoga</option>
-                            <option value="Swimming">Swimming</option>
-                        </select>
-                    </div>
-                    <div class="section_content">
-                        <div class="item" data-color="#7749FF" data-color-type="dark">
-                            <div class="item_top">
-                                <div class="time">16 Giugno, 09:00 am</div>
-                                <div class="category">Scii</div>
-                            </div>
-                            <div class="item_center">
-                                <div class="classroom">Classroom #1</div>
-                                <h3 class="_title">
-                                    Antigravity yoga in the hammocks
-                                </h3>
-                            </div>
-                            <div class="item_bottom">
-                                <div class="trainer">
-                                    <div class="img ie-img">
-                                        <img src="img/placeholder.jpg" alt="">
-                                    </div>
-                                    <p class="name">John Digistrict</p>
-                                </div>
-                                <button data-href="#join" class="btn getModal">Entra ora</button>
-                            </div>
-                        </div>
-
-                        <div class="item" data-color="#FFDC49" data-color-type="light">
-                            <div class="item_top">
-                                <div class="time">20 May, 09:00 am</div>
-                                <div class="category">CrossFit</div>
-                            </div>
-                            <div class="item_center">
-                                <div class="classroom">Classroom #1</div>
-                                <h3 class="_title">
-                                    CrossFit Basics
-                                </h3>
-                            </div>
-                            <div class="item_bottom">
-                                <div class="trainer">
-                                    <div class="img ie-img">
-                                        <img src="img/placeholder.jpg" alt="">
-                                    </div>
-                                    <p class="name">John Digistrict</p>
-                                </div>
-                                <button data-href="#join" class="btn getModal">Entra ora</button>
-                            </div>
-                        </div>
-
-                        <div class="item" data-color="#7749FF" data-color-type="dark">
-                            <div class="item_top">
-                                <div class="time">20 May, 09:00 am</div>
-                                <div class="category">Yoga</div>
-                            </div>
-                            <div class="item_center">
-                                <div class="classroom">Classroom #1</div>
-                                <h3 class="_title">
-                                    Antigravity yoga in the hammocks
-                                </h3>
-                            </div>
-                            <div class="item_bottom">
-                                <div class="trainer">
-                                    <div class="img ie-img">
-                                        <img src="img/placeholder.jpg" alt="">
-                                    </div>
-                                    <p class="name">John Digistrict</p>
-                                </div>
-                                <button data-href="#join" class="btn getModal">Entra ora</button>
-                            </div>
-                        </div>
-
-                        <div class="item" data-color="#FF4F58" data-color-type="dark">
-                            <div class="item_top">
-                                <div class="time">20 May, 09:00 am</div>
-                                <div class="category">Yoga</div>
-                            </div>
-                            <div class="item_center">
-                                <div class="classroom">Classroom #1</div>
-                                <h3 class="_title">
-                                    Antigravity yoga in the hammocks
-                                </h3>
-                            </div>
-                            <div class="item_bottom">
-                                <div class="trainer">
-                                    <div class="img ie-img">
-                                        <img src="img/placeholder.jpg" alt="">
-                                    </div>
-                                    <p class="name">John Digistrict</p>
-                                </div>
-                                <button data-href="#join" class="btn getModal">Entra ora</button>
-                            </div>
-                        </div>
-
-                        <div class="item" data-color="#476EFF" data-color-type="dark">
-                            <div class="item_top">
-                                <div class="time">20 May, 09:00 am</div>
-                                <div class="category">CrossFit</div>
-                            </div>
-                            <div class="item_center">
-                                <div class="classroom">Classroom #1</div>
-                                <h3 class="_title">
-                                    Antigravity yoga in the hammocks
-                                </h3>
-                            </div>
-                            <div class="item_bottom">
-                                <div class="trainer">
-                                    <div class="img ie-img">
-                                        <img src="img/placeholder.jpg" alt="">
-                                    </div>
-                                    <p class="name">John Digistrict</p>
-                                </div>
-                                <button data-href="#join" class="btn getModal">Entra ora</button>
-                            </div>
-                        </div>
-
-                        <div class="item" data-color="#476EFF" data-color-type="dark">
-                            <div class="item_top">
-                                <div class="time">20 May, 09:00 am</div>
-                                <div class="category">Yoga</div>
-                            </div>
-                            <div class="item_center">
-                                <div class="classroom">Classroom #1</div>
-                                <h3 class="_title">
-                                    Antigravity yoga in the hammocks
-                                </h3>
-                            </div>
-                            <div class="item_bottom">
-                                <div class="trainer">
-                                    <div class="img ie-img">
-                                        <img src="img/placeholder.jpg" alt="">
-                                    </div>
-                                    <p class="name">John Digistrict</p>
-                                </div>
-                                <button data-href="#join" class="btn getModal">Entra ora</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php require("schedulation.php");?>
         </section>
-        <section class="trainers">
-            <div class="wrap">
-                <div class="wrap_float">
-                    <div class="section_top">
-                        <h2 class="title">Our trainers</h2>
-                        <div class="arrows">
-                            <div class="arrow prev">Prev</div>
-                            <div class="arrow next">Next</div>
-                        </div>
-                        <a href="trainers.php" class="link"><span>All trainers</span></a>
-                    </div>
-                    <div class="section_content">
-                        <div class="trainers_slider" id="trainers_slider">
-                            <div class="item">
-                                <a href="trainer-single.php" class="photo ie-img">
-                                    <img src="img/placeholder.jpg" alt="">
-                                </a>
-                                <a href="trainer-single.php" class="info">
-                                    <div class="name">John Digistrict</div>
-                                    <div class="category">Strength training</div>
-                                </a>
-                                <div class="socials">
-                                    <a href="#" class="linked-in"></a>
-                                    <a href="#" class="twitter"></a>
-                                    <a href="#" class="instagram"></a>
-                                </div>
-                            </div>
+        
+        <?php
+            require("Comprensori.php");
+        ?>
 
-                            <div class="item">
-                                <a href="trainer-single.php" class="photo ie-img">
-                                    <img src="img/placeholder.jpg" alt="">
-                                </a>
-                                <a href="trainer-single.php" class="info">
-                                    <div class="name">John Digistrict</div>
-                                    <div class="category">Strength training</div>
-                                </a>
-                                <div class="socials">
-                                    <a href="#" class="linked-in"></a>
-                                    <a href="#" class="twitter"></a>
-                                    <a href="#" class="instagram"></a>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <a href="trainer-single.php" class="photo ie-img">
-                                    <img src="img/placeholder.jpg" alt="">
-                                </a>
-                                <a href="trainer-single.php" class="info">
-                                    <div class="name">John Digistrict</div>
-                                    <div class="category">Strength training</div>
-                                </a>
-                                <div class="socials">
-                                    <a href="#" class="linked-in"></a>
-                                    <a href="#" class="twitter"></a>
-                                    <a href="#" class="instagram"></a>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <a href="trainer-single.php" class="photo ie-img">
-                                    <img src="img/placeholder.jpg" alt="">
-                                </a>
-                                <a href="trainer-single.php" class="info">
-                                    <div class="name">John Digistrict</div>
-                                    <div class="category">Strength training</div>
-                                </a>
-                                <div class="socials">
-                                    <a href="#" class="linked-in"></a>
-                                    <a href="#" class="twitter"></a>
-                                    <a href="#" class="instagram"></a>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <a href="trainer-single.php" class="photo ie-img">
-                                    <img src="img/placeholder.jpg" alt="">
-                                </a>
-                                <a href="trainer-single.php" class="info">
-                                    <div class="name">John Digistrict</div>
-                                    <div class="category">Strength training</div>
-                                </a>
-                                <div class="socials">
-                                    <a href="#" class="linked-in"></a>
-                                    <a href="#" class="twitter"></a>
-                                    <a href="#" class="instagram"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="blog_section">
             <div class="wrap">
                 <div class="wrap_float">
@@ -475,11 +255,11 @@
                     <div class="section_content">
                         <a href="blog-single.php" class="blog_item">
                             <div class="img ie-img">
-                                <img src="img/placeholder.jpg" alt=""> <!-- prendere immagini webcam da db-->
+                                <img src="https://panodata.panomax.com/cams/1343/sassolungo_e_sella.jpg?1622410202313" alt=""> <!-- prendere immagini webcam da db-->
                             </div>
-                            <p class="_date">FITNESS / 15 NOV. 2019</p>
+                            <p class="_date"><span class="js-day"></span> <span class="js-month"></span></p>
                             <h3 class="_title">
-                                Cortina D'ampezzo
+                                Val di Fassa
                             </h3>
                         </a>
 
@@ -487,7 +267,7 @@
                             <div class="img ie-img" style="background-color: #000;">
                                 <img src="img/favicons/favicon-32x32.png" alt="">
                             </div>
-                            <p class="_date">FITNESS / 15 NOV. 2019</p>
+                            <p class="_date"><span class="js-day"></span> <span class="js-month"></span></p>
                             <h3 class="_title">
                                 Iperski | Kennedy
                             </h3>
@@ -495,11 +275,11 @@
 
                         <a href="blog-single.php" class="blog_item">
                             <div class="img ie-img">
-                                <img src="img/placeholder.jpg" alt="">
+                                <img src="http://webcam.zallinger.com/latest/latestOlL.jpg?1622410102525" alt="">
                             </div>
-                            <p class="_date">FITNESS / 15 NOV. 2019</p>
+                            <p class="_date"><span class="js-day"></span> <span class="js-month"></span></p>
                             <h3 class="_title">
-                                Val Gardena
+                                Marmolada
                             </h3>
                         </a>
                     </div>
@@ -513,7 +293,7 @@
                     <h2 class="title">
                     AVEVI UNO <br>SKIPASS <br>VALIDO PER LA STAGIONE 2019/2020?
                     </h2>
-                    <div class="play_btn getModal js-video" data-href="#" data-src="XXX">
+                    <div class="play_btn getModal js-video" data-href="#video" data-src="Kwn-833mWF0">
                         Scopri le nostre <br>iniziative e scontistiche!
                     </div>
                 </div>
@@ -531,17 +311,25 @@
         </section>
         <div class="instagram-block">
             <a class="item ie-img">
-                <img src="img/placeholder.jpg" alt="">
+                <img src="img/skitumblr.jpg" alt="">
             </a>
             <a class="item ie-img">
-                <img src="img/placeholder.jpg" alt="">
+                <img src="img/skirisalita.jpg" alt="">
             </a>
             <a class="item ie-img">
-                <img src="img/placeholder.jpg" alt="">
+                <img src="img/kidsski.jpg" alt="">
             </a>
             <a class="item ie-img">
-                <img src="img/placeholder.jpg" alt="">
+                <img src="img/axlski.jpg" alt="">
             </a>
+            <button class="btn submit" id="find-me">EMERGENZA</button>
+
+
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong id="status" style="color:white;"></strong>
+  <a id = "map-link" style="color:white;" target="_blank"></a>
+</div>
         </div>
         <?php require("footer.php");?>
     </div>
@@ -559,17 +347,17 @@
         <div class="modal modal_window modal_question" id="ask">
             <div class="modal_wrap">
                 <h2 class="modal_title">
-                    Ask the coach a question
+                    Hai delle domande?
                 </h2>
                 <div class="modal_subtitle">
-                    Any questions or&nbsp;something <br>is&nbsp;not working? Ask the coach
+                    Any questions or&nbsp;something <br>is&nbsp;not working? check the FAQ section
                 </div>
                 <form class="form">
                     <div class="input_wrap">
-                        <input type="text" placeholder="Name*" class="input">
+                        <input type="text" placeholder="Numero dello SkiPass" class="input">
                     </div>
                     <div class="input_wrap tel">
-                        <input type="tel" placeholder="Phone number*" class="input js-tel">
+                        <input type="tel" placeholder="Numero di telefono" class="input js-tel">
                     </div>
                     <div class="input_wrap fullwidth textarea_wrap">
                         <textarea class="textarea" placeholder="Message text"></textarea>
@@ -577,45 +365,46 @@
                     <div class="agreement">
                         <input type="checkbox" id="check-2" checked>
                         <label for="check-2">
-                            I consent to the processing of <a href="#">personal data</a> and agree to the terms and <a href="#">privacy policy</a>
+                            Acconsento al trattamento dei miei <a href="#">dati personali</a> e acconsento ai termini sulla <a href="#">politica sulla privacy</a>.
                         </label>
                     </div>
-                    <button type="submit" class="btn submit js-send-btn">Send</button>
+                    <button type="submit" class="btn submit js-send-btn">Prenota</button>
                 </form>
                 <div class="modal_close"></div>
             </div>
         </div>
     </div>
 
+    <!-- modals fasce orarie -->
     <div style="display: none;">
         <div class="modal modal_window modal_training" id="buy">
             <div class="modal_wrap">
                 <h2 class="modal_title">
-                    1 individual training
+                    Impianto di risalita
                 </h2>
                 <div class="trainer">
                     <div class="userpic ie-img">
-                        <img src="img/placeholder.jpg" alt="">
+                        <img src="img/alert.png" alt="">
                     </div>
                     <div class="name">
-                        John Digistrict
+                        Poche prenotazioni residue
                     </div>
                 </div>
-                <div class="cost">$ 3235 / month</div>
+                <div class="cost">€ 25</div>
                 <form class="form">
                     <div class="input_wrap">
-                        <input type="text" placeholder="Name*" class="input">
+                        <input type="text" placeholder="Numero dello SkiPass" class="input">
                     </div>
                     <div class="input_wrap tel">
-                        <input type="tel" placeholder="Phone number*" class="input js-tel">
+                        <input type="tel" placeholder="Numero di telefono" class="input js-tel">
                     </div>
                     <div class="agreement">
                         <input type="checkbox" id="check-3" checked>
                         <label for="check-3">
-                            I consent to the processing of <a href="#">personal data</a> and agree to the terms and <a href="#">privacy policy</a>
+                        Acconsento al trattamento dei miei <a href="#">dati personali</a> e acconsento ai termini sulla <a href="#">politica sulla privacy</a>.
                         </label>
                     </div>
-                    <button type="submit" class="btn submit js-send-btn">BUY NOW</button>
+                    <button type="submit" class="btn submit js-send-btn">PRENOTA</button>
                 </form>
                 <div class="modal_close"></div>
             </div>
@@ -624,33 +413,33 @@
 
     <div style="display: none;">
         <div class="modal modal_window modal_training" id="join">
-            <div class="modal_wrap">
+        <div class="modal_wrap">
                 <h2 class="modal_title">
-                    CrossFit Basics
+                    Impianto di risalita
                 </h2>
                 <div class="trainer">
                     <div class="userpic ie-img">
-                        <img src="img/placeholder.jpg" alt="">
+                        <img src="img/check.png" alt="">
                     </div>
                     <div class="name">
-                        John Digistrict
+                        Poco affollato
                     </div>
                 </div>
-                <div class="cost">$ 3235 / month</div>
+                <div class="cost">€ 25</div>
                 <form class="form">
                     <div class="input_wrap">
-                        <input type="text" placeholder="Name*" class="input">
+                        <input type="text" placeholder="Numero dello SkiPass" class="input">
                     </div>
                     <div class="input_wrap tel">
-                        <input type="tel" placeholder="Phone number*" class="input js-tel">
+                        <input type="tel" placeholder="Numero di telefono" class="input js-tel">
                     </div>
                     <div class="agreement">
-                        <input type="checkbox" id="check-4" checked>
-                        <label for="check-4">
-                            I consent to the processing of <a href="#">personal data</a> and agree to the terms and <a href="#">privacy policy</a>
+                        <input type="checkbox" id="check-3" checked>
+                        <label for="check-3">
+                        Acconsento al trattamento dei miei <a href="#">dati personali</a> e acconsento ai termini sulla <a href="#">politica sulla privacy</a>.
                         </label>
                     </div>
-                    <button type="submit" class="btn submit js-send-btn">BUY NOW</button>
+                    <button type="submit" class="btn submit js-send-btn">PRENOTA</button>
                 </form>
                 <div class="modal_close"></div>
             </div>
@@ -676,7 +465,7 @@
                     <div class="agreement">
                         <input type="checkbox" id="check-5" checked>
                         <label for="check-5">
-                            I consent to the processing of <a href="#">personal data</a> and agree to the terms and <a href="#">privacy policy</a>
+                        Acconsento al trattamento dei miei <a href="#">dati personali</a> e acconsento ai termini sulla <a href="#">politica sulla privacy</a>.
                         </label>
                     </div>
                     <button type="submit" class="btn submit js-send-btn">Apply</button>
@@ -702,6 +491,40 @@
 
     <!-- CONSENSO COOKIE -->
     <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="37a6175c-5d3d-4754-a4c7-9f2d7111ebb4" async=""></script>
+    <!-- EMERGENZA GPS -->
+    <script>
+        function geoFindMe() {
+
+            const status = document.querySelector('#status');
+            const mapLink = document.querySelector('#map-link');
+
+            mapLink.href = '';
+            mapLink.textContent = '';
+
+            function success(position) {
+            const latitude  = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            status.textContent = '';
+            mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+            mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+            }
+
+            function error() {
+            status.textContent = 'Unable to retrieve your location';
+            }
+
+            if(!navigator.geolocation) {
+            status.textContent = 'Geolocation is not supported by your browser';
+            } else {
+            status.textContent = 'Locating…';
+            navigator.geolocation.getCurrentPosition(success, error);
+            }
+
+        }
+
+        document.querySelector('#find-me').addEventListener('click', geoFindMe);
+</script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>

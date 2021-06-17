@@ -26,7 +26,7 @@
         <div class="breadcrumbs">
             <div class="wrap">
                 <div class="wrap_float">
-                    <a href="..">Home</a> / <a href="price.php" class="current">Price</a>
+                    <a href="index.php">Home</a> / <a href="price.php" class="current">Price</a>
                 </div>
             </div>
         </div>

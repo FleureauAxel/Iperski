@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Risultati | IperSki</title>
+    <title>Classes | IperSki</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
@@ -19,103 +19,51 @@
 </head>
 
 <body>
-    <div class="container page blog-page">
+    <div class="container page">
         <header class="top_panel top_panel--page">
-                        <?php require("navbar.php");?>
+            <?php require("navbar.php");?>
         </header>
         <div class="breadcrumbs">
             <div class="wrap">
                 <div class="wrap_float">
-                    <a href="index.php">Home</a> / <a href="search-results.php" class="current">Search results</a>
+                    <a href="index.php">Home</a> / <a href="#" class="current">Servizi</a>
                 </div>
             </div>
         </div>
-        <section class="blog blog_section">
+        <section class="classes_list_section">
             <div class="wrap">
                 <div class="wrap_float">
-                    <div class="title_div">
-                        <h1 class="page_title">Ricerca</h1>
-                        <div class="search-div">
-                            <input type="text" class="input" placeholder="Search">
-                            <button class="submit"></button>
-                        </div>
-                    </div>
-                    <div class="text">
-                        Risultati della ricerca
-                    </div>
-                    <div class="section_content">
-                        
-                        <a href="blog-single.php" class="blog_item">
-                            <div class="img ie-img">
-                                <img src="img/placeholder.jpg" alt="">
+                    <h2 class="page_title">I Nostri Servizi</h2>
+                    <div class="classes_list">
+
+                        <a href="risalita.php" class="classes_item" style="background-color: #476EFF" data-color-type="dark">
+                            <div class="classes_item_right">
+                                <div class="image ie-img">
+                                    <img class="js-image" src="img/skirisalita.jpg" alt="">
+                                </div>
                             </div>
-                            <p class="_date">SKI / 15 GIU. 2021</p>
-                            <h3 class="_title">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing.
-                            </h3>
+                            <div class="classes_item_left">
+                                <p class="block _category">Risalita</p>
+                                <h3 class="block _title">I migliori impianti!</h3>
+                            </div>
                         </a>
 
-                        <a href="blog-single.php" class="blog_item">
-                            <div class="img ie-img">
-                                <img src="img/placeholder.jpg" alt="">
+                        <a href="risalita.php" class="classes_item" style="background-color: #FF5100" data-color-type="dark">
+                            <div class="classes_item_right">
+                                <div class="image ie-img">
+                                    <img class="js-image" src="img/skitumblr.jpg" alt="">
+                                </div>
                             </div>
-                            <p class="_date">RISALITA / 15 GIU. 2021</p>
-                            <h3 class="_title">
-                                Lorem ipsum dolor sit amet, consectetur.
-                            </h3>
+                            <div class="classes_item_left">
+                                <p class="block _category">Discesa</p>
+                                <h3 class="block _title">Le nostre piste accessoriate.</h3>
+                            </div>
                         </a>
 
-                        <a href="blog-single.php" class="blog_item">
-                            <div class="img ie-img">
-                                <img src="img/placeholder.jpg" alt="">
-                            </div>
-                            <p class="_date">SKI / 15 GIU. 2021</p>
-                            <h3 class="_title">
-                                Lorem ipsum dolor sit amet, consectetur.
-                            </h3>
-                        </a>
-
-                        <a href="blog-single.php" class="blog_item">
-                            <div class="img ie-img">
-                                <img src="img/placeholder.jpg" alt="">
-                            </div>
-                            <p class="_date">SKI / 15 GIU. 2021</p>
-                            <h3 class="_title">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing.
-                            </h3>
-                        </a>
-
-                        <a href="blog-single.php" class="blog_item">
-                            <div class="img ie-img">
-                                <img src="img/placeholder.jpg" alt="">
-                            </div>
-                            <p class="_date">RISALITA / 15 GIU. 2021</p>
-                            <h3 class="_title">
-                                Lorem ipsum dolor sit amet, consectetur.
-                            </h3>
-                        </a>
-
-                    </div>
-                    <div class="pag-wrap">
-                        <div class="pagination">
-                            <a class="arrow prev"></a>
-                            <ul>
-                                <li><a href="#" class="active">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#" class="points">...</a></li>
-                                <li><a href="#">10</a></li>
-                                <li><a href="#">11</a></li>
-                            </ul>
-                            <a class="arrow next"></a>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <?php require("footer.php");?>
     </div>
 

@@ -26,7 +26,7 @@
         <div class="breadcrumbs">
             <div class="wrap">
                 <div class="wrap_float">
-                    <a href="..">Home</a> / <a href="sitemap.php" class="current">Sitemap</a>
+                    <a href="index.php">Home</a> / <a href="sitemap.php" class="current">Sitemap</a>
                 </div>
             </div>
         </div>
@@ -38,37 +38,11 @@
                         <div class="column">
                             <h3 class="_title">Pages</h3>
                             <ul>
-                                <li><a href="about.php">About</a></li>
                                 <li><a href="contacts.php">Contacts</a></li>
-                                <li><a href="faq.php">FAQ</a></li>
-                                <li><a href="price.php">Price</a></li>
                                 <li><a href="schedule.php">Schedule</a></li>
                                 <li><a href="sitemap.php">Sitemap</a></li>
-                                <li><a href="static.php">Static page</a></li>
-                                <li><a href="vacancies.php">Vacancies</a></li>
                                 <li><a href="search-results.php">Search results</a></li>
                                 <li><a href="search-no-results.php">Search results (empty)</a></li>
-                            </ul>
-                        </div>
-                        <div class="column">
-                            <h3 class="_title">Trainers</h3>
-                            <ul>
-                                <li><a href="trainers.php">Trainers archive</a></li>
-                                <li><a href="trainer-single.php">Trainers page</a></li>
-                            </ul>
-                        </div>
-                        <div class="column">
-                            <h3 class="_title">Classes</h3>
-                            <ul>
-                                <li><a href="classes.php">Classes archive</a></li>
-                                <li><a href="classes-single.php">Classes page</a></li>
-                            </ul>
-                        </div>
-                        <div class="column">
-                            <h3 class="_title">Blog</h3>
-                            <ul>
-                                <li><a href="blog.php">Blog archive</a></li>
-                                <li><a href="blog-single.php">Blog page</a></li>
                             </ul>
                         </div>
                     </div>

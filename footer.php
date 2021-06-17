@@ -11,7 +11,7 @@
                         </div>
                         <div class="center">
                             <ul class="menu">
-                                <li><a href="..">HOME</a></li>
+                                <li><a href="index.php">Home</a></li>
                                 <li><a href="blog.php">WEBCAMS</a></li>
                                 <li><a href="contacts.php">CONTATTI</a></li>
                                 <li><a href="about.php">ABOUT US</a></li>
@@ -44,9 +44,8 @@
                             <div class="col">
                                 <h4 class="block _title">AZIENDA</h4>
                                 <ul>
-                                    <li><a href="..">Home</a></li>
+                                    <li><a href="index.php">Home</a></li>
                                     <li><a href="about.php">About us</a></li>
-                                    <li><a href="classes.php">Classi</a></li>
                                     <li><a href="schedule.php">schedulazione</a></li>
                                     <li><a href="faq.php">FAQ</a></li>
                                 </ul>
@@ -54,16 +53,14 @@
                             <div class="col">
                                 <h4 class="block _title">SERVIZI</h4>
                                 <ul>
-                                    <li><a href="trainers.php">Trainers</a></li>
                                     <li><a href="blog.php">Webcams</a></li>
-                                    <li><a href="static.php">Static</a></li>
-                                    <li><a href="price.php">Prezzi</a></li>
+                                    <li><a href="services.php">Discesa & Risalita</a></li>
                                     <li><a href="contacts.php">Contatti</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="right">
-                            <h4 class="block _title">CONTACT US</h4>
+                            <h4 class="block _title">CONTATTACI</h4>
                             <p class="p">
                                 Via Interna 7, 33170, Friuli Venezia-Giulia [PN]
                             </p>
@@ -90,7 +87,7 @@
                             </ul>
                         </div>
                         <div class="right">
-                            Powered by <a href="IperSki.it" target="_blank">IperSki.it</a>
+                            Powered by <a href="IperSki.it" target="_blank"> ITST J. F. Kennedy</a>
                         </div>
                     </div>
                 </div>

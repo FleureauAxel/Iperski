@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Contacts | IperSki</title>
+    <title>Contatti | IperSki</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
@@ -26,7 +26,7 @@
         <div class="breadcrumbs">
             <div class="wrap">
                 <div class="wrap_float">
-                    <a href="..">Home</a> / <a href="contacts.php" class="current">Contacts</a>
+                    <a href="index.php">Home</a> / <a href="contacts.php" class="current">Contatti</a>
                 </div>
             </div>
         </div>
@@ -34,57 +34,39 @@
             <div class="wrap">
                 <div class="wrap_float">
                     <div class="title_div">
-                        <h1 class="page_title">Contacts</h1>
+                        <h1 class="page_title">Contatti</h1>
                         <div class="city_select select_div" id="city_select">
-                            <div class="_city select_val">NEW YORK</div>
-                            <select class="select js-select">
-                                <option value="New York">New York</option>
-                                <option value="Berlin">Berlin</option>
-                            </select>
+                            <div class="_city select_val">PORDENONE</div>
                         </div>
                     </div>
-                    <div class="map-block">
-                        <div class="map" id="map">
-                            <!--Maps here-->
-                        </div>
-                    </div>
-                    <div class="columns">
+                        <!--Maps here-->
+                        <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+                        <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
+                        var setting = {"height":564,"width":1080,"zoom":17,"queryString":"Via Interna, 7, Pordenone, PN, Italia","place_id":"ChIJEcu-hUx7eUcR3CnP_vLW60s","satellite":false,"centerCoord":[45.968008616426154,12.661213900000003],"cid":"0x4bebd6f2fecf29dc","lang":"it","cityUrl":"/italy/portogruaro-45463","cityAnchorText":"Mappa di Portogruaro, Area Nord, Italia","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"526732"};
+                        var d = document;
+                        var s = d.createElement('script');
+                        s.src = 'https://1map.com/js/script-for-user.js?embed_id=526732';
+                        s.async = true;
+                        s.onload = function (e) {
+                        window.OneMap.initMap(setting)
+                        };
+                        var to = d.getElementsByTagName('script')[0];
+                        to.parentNode.insertBefore(s, to);
+                        })();</script><a href="https://1map.com/it/map-embed">1 Map</a></div>
+
+                    <div class="columns" style="padding-top:20px">
                         <div class="column">
-                            <h3 class="_title">Feedback:</h3>
-                            <div class="_content">
-                                Suggestions, questions, wishes
-                                <br><a href="tel:#">+ 1 65 094 7** 622</a>
-                                <br><a href="mailto:hellodigi@yandex.ru">hellodigi@yandex.ru</a>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <h3 class="_title">Corporate sales Department:</h3>
+                            <h3 class="_title">dati di contatto:</h3>
                             <div class="_content">
                                 <div class="director">
                                     <div class="photo ie-img">
-                                        <img src="img/placeholder.jpg" alt="">
+                                        <img src="img/axel.JPEG" alt="">
                                     </div>
-                                    <div class="name">John Digistrict</div>
+                                    <div class="name">Axel Nicolas Leon Fleureau</div>
                                 </div>
-                                <br>Director of corporate sales
-                                <br><a href="tel:+1234567">+ 1 65 094 7** 622</a>
-                                <br><a href="mailto:hellodigi@yandex.ru">hellodigi@yandex.ru</a>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <h3 class="_title">Feedback:</h3>
-                            <div class="_content">
-                                Suggestions, questions, wishes
-                                <br><a href="tel:+1234567">+ 1 65 094 7** 622</a>
-                                <br><a href="mailto:hellodigi@yandex.ru">hellodigi@yandex.ru</a>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <h3 class="_title">Feedback:</h3>
-                            <div class="_content">
-                                Suggestions, questions, wishes
-                                <br><a href="tel:+1234567">+ 1 65 094 7** 622</a>
-                                <br><a href="mailto:hellodigi@yandex.ru">hellodigi@yandex.ru</a>
+                                <br>Referente generale
+                                <br><a href="tel:++393466037660">+39 346 603 7660</a>
+                                <br><a href="mailto:axel.fleureau@icloud.com">axel.fleureau@iperski.it</a>
                             </div>
                         </div>
                     </div>
@@ -92,27 +74,27 @@
                         <h2 class="title">Feedback Form</h2>
                         <form class="form">
                             <div class="input_wrap">
-                                <input type="text" class="input" placeholder="Name*">
+                                <input type="text" class="input" placeholder="Nome">
                             </div>
                             <div class="input_wrap">
-                                <input type="tel" class="input js-tel" placeholder="Phone number*">
+                                <input type="tel" class="input js-tel" placeholder="Telefono*">
                             </div>
                             <div class="input_wrap select_wrap">
                                 <select class="select">
-                                    <option value="Ask a question">Ask a question</option>
-                                    <option value="Other">Other</option>
+                                    <option value="Ask a question">Facci una domanda</option>
+                                    <option value="Other">Altro</option>
                                 </select>
                             </div>
                             <div class="input_wrap textarea_wrap">
-                                <textarea class="textarea" placeholder="Message text"></textarea>
+                                <textarea class="textarea" placeholder="Messaggio"></textarea>
                             </div>
                             <div class="agreement">
                                 <input type="checkbox" id="check-1" checked>
                                 <label for="check-1">
-                                    I consent to the processing of <a href="#">personal data</a> and agree to the terms and <a href="#">privacy policy</a>
+                                    Acconsento al trattamento dei miei <a href="#">dati personali</a> e acconsento alla <a href="#">privacy policy</a>
                                 </label>
                             </div>
-                            <button class="btn send js-send-btn">SEND</button>
+                            <button class="btn send js-send-btn">INVIA</button>
                         </form>
                     </div>
                 </div>
@@ -131,144 +113,13 @@
     </div>
 
     <div style="display: none;">
-        <div class="modal modal_window modal_question" id="ask">
-            <div class="modal_wrap">
-                <h2 class="modal_title">
-                    Ask the coach a question
-                </h2>
-                <div class="modal_subtitle">
-                    Any questions or&nbsp;something <br>is&nbsp;not working? Ask the coach
-                </div>
-                <form class="form">
-                    <div class="input_wrap">
-                        <input type="text" placeholder="Name*" class="input">
-                    </div>
-                    <div class="input_wrap tel">
-                        <input type="tel" placeholder="Phone number*" class="input js-tel">
-                    </div>
-                    <div class="input_wrap fullwidth textarea_wrap">
-                        <textarea class="textarea" placeholder="Message text"></textarea>
-                    </div>
-                    <div class="agreement">
-                        <input type="checkbox" id="check-2" checked>
-                        <label for="check-2">
-                            I consent to the processing of <a href="#">personal data</a> and agree to the terms and <a href="#">privacy policy</a>
-                        </label>
-                    </div>
-                    <button type="submit" class="btn submit js-send-btn">Send</button>
-                </form>
-                <div class="modal_close"></div>
-            </div>
-        </div>
-    </div>
-
-    <div style="display: none;">
-        <div class="modal modal_window modal_training" id="buy">
-            <div class="modal_wrap">
-                <h2 class="modal_title">
-                    1 individual training
-                </h2>
-                <div class="trainer">
-                    <div class="userpic ie-img">
-                        <img src="img/placeholder.jpg" alt="">
-                    </div>
-                    <div class="name">
-                        John Digistrict
-                    </div>
-                </div>
-                <div class="cost">$ 3235 / month</div>
-                <form class="form">
-                    <div class="input_wrap">
-                        <input type="text" placeholder="Name*" class="input">
-                    </div>
-                    <div class="input_wrap tel">
-                        <input type="tel" placeholder="Phone number*" class="input js-tel">
-                    </div>
-                    <div class="agreement">
-                        <input type="checkbox" id="check-3" checked>
-                        <label for="check-3">
-                            I consent to the processing of <a href="#">personal data</a> and agree to the terms and <a href="#">privacy policy</a>
-                        </label>
-                    </div>
-                    <button type="submit" class="btn submit js-send-btn">BUY NOW</button>
-                </form>
-                <div class="modal_close"></div>
-            </div>
-        </div>
-    </div>
-
-    <div style="display: none;">
-        <div class="modal modal_window modal_training" id="join">
-            <div class="modal_wrap">
-                <h2 class="modal_title">
-                    CrossFit Basics
-                </h2>
-                <div class="trainer">
-                    <div class="userpic ie-img">
-                        <img src="img/placeholder.jpg" alt="">
-                    </div>
-                    <div class="name">
-                        John Digistrict
-                    </div>
-                </div>
-                <div class="cost">$ 3235 / month</div>
-                <form class="form">
-                    <div class="input_wrap">
-                        <input type="text" placeholder="Name*" class="input">
-                    </div>
-                    <div class="input_wrap tel">
-                        <input type="tel" placeholder="Phone number*" class="input js-tel">
-                    </div>
-                    <div class="agreement">
-                        <input type="checkbox" id="check-4" checked>
-                        <label for="check-4">
-                            I consent to the processing of <a href="#">personal data</a> and agree to the terms and <a href="#">privacy policy</a>
-                        </label>
-                    </div>
-                    <button type="submit" class="btn submit js-send-btn">BUY NOW</button>
-                </form>
-                <div class="modal_close"></div>
-            </div>
-        </div>
-    </div>
-
-    <div style="display: none;">
-        <div class="modal modal_window modal_training" id="vacancy">
-            <div class="modal_wrap">
-                <h2 class="modal_title">
-                    Corporate sales Manager
-                </h2>
-                <div class="modal_subtitle">
-                    Leave a request and we will contact you
-                </div>
-                <form class="form">
-                    <div class="input_wrap">
-                        <input type="text" placeholder="Name*" class="input">
-                    </div>
-                    <div class="input_wrap tel">
-                        <input type="tel" placeholder="Phone number*" class="input js-tel">
-                    </div>
-                    <div class="agreement">
-                        <input type="checkbox" id="check-5" checked>
-                        <label for="check-5">
-                            I consent to the processing of <a href="#">personal data</a> and agree to the terms and <a href="#">privacy policy</a>
-                        </label>
-                    </div>
-                    <button type="submit" class="btn submit js-send-btn">Apply</button>
-                </form>
-                <div class="modal_close"></div>
-            </div>
-        </div>
-    </div>
-
-    <div style="display: none;">
         <div class="modal modal_window modal_success" id="success">
             <div class="modal_wrap">
                 <h2 class="modal_title">
-                    Thanks! Your data has been sent
+                    Grazie! i tuoi dati sono stati inviati
                 </h2>
                 <div class="modal_subtitle">
-                    Expect a response soon
+                    a presto!
                 </div>
                 <div class="modal_close"></div>
             </div>

@@ -26,7 +26,7 @@
         <div class="breadcrumbs">
             <div class="wrap">
                 <div class="wrap_float">
-                    <a href="..">Home</a> / <a href="search-no-results.php" class="current">Search results</a>
+                    <a href="index.php">Home</a> / <a href="search-no-results.php" class="current">Search results</a>
                 </div>
             </div>
         </div>
